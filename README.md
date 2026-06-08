@@ -6,68 +6,79 @@
 
 <style>
 body{
-    font-family: sans-serif;
-    text-align: center;
-    background: #f3f3f3;
-    margin: 0;
+    margin:0;
+    font-family:sans-serif;
+    background:#eef2e6;
+    text-align:center;
 }
 
-h1{
-    background: #2e7d32;
-    color: white;
-    margin: 0;
-    padding: 15px;
+header{
+    background:#2e7d32;
+    color:white;
+    padding:15px;
+    font-size:22px;
+    font-weight:bold;
 }
 
-.card{
-    padding: 20px;
+.container{
+    padding:20px;
 }
 
 img{
-    width: 90%;
-    max-width: 750px;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    width:90%;
+    max-width:750px;
+    height:420px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+h2{
+    margin:15px 0 5px;
+}
+
+p{
+    color:#444;
+    font-size:16px;
+}
+
+.btn{
+    margin-top:15px;
 }
 
 button{
-    padding: 10px 18px;
-    margin: 10px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    background: #333;
-    color: white;
+    padding:10px 18px;
+    margin:5px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:#333;
+    color:white;
+    font-size:14px;
 }
 
 button:hover{
-    background: #555;
-}
-
-.place{
-    font-size: 22px;
-    margin-top: 10px;
+    background:#555;
 }
 </style>
 </head>
 
 <body>
 
-<h1>🌿 ที่เที่ยวอำเภอเดชอุดม</h1>
+<header>🌿 ที่เที่ยวอำเภอเดชอุดม จังหวัดอุบลราชธานี</header>
 
-<div class="card">
+<div class="container">
 
     <h2 id="title">วัดสำราญนิเวศ</h2>
 
-    <img id="img"
-    src="https://source.unsplash.com/800x500/?temple,thailand">
+    <img id="img" src="https://source.unsplash.com/800x500/?temple,thailand">
 
-    <p class="place" id="desc">วัดสำคัญของอำเภอเดชอุดม บรรยากาศสงบ</p>
+    <p id="desc">วัดสำคัญในพื้นที่เดชอุดม บรรยากาศสงบ เหมาะแก่การทำบุญ</p>
 
-    <br>
-
-    <button onclick="prev()">⬅️ ก่อนหน้า</button>
-    <button onclick="next()">➡️ ถัดไป</button>
+    <div class="btn">
+        <button onclick="prev()">⬅️ ก่อนหน้า</button>
+        <button onclick="next()">➡️ ถัดไป</button>
+    </div>
 
 </div>
 
@@ -77,53 +88,53 @@ let page = 1;
 const data = [
     {
         title:"วัดสำราญนิเวศ",
-        img:"temple,thai,ubon",
-        desc:"วัดดังในอำเภอเดชอุดม บรรยากาศเงียบสงบ เหมาะแก่การทำบุญ"
+        img:"temple thailand rural",
+        desc:"วัดในอำเภอเดชอุดม เป็นศูนย์รวมจิตใจของชาวบ้าน"
     },
     {
-        title:"วัดบ้านทุ่งนางโอก",
-        img:"temple,village,ubon",
-        desc:"วัดท้องถิ่นในชุมชน วิถีชีวิตเรียบง่าย"
+        title:"วัดบ้านนา",
+        img:"temple village thailand",
+        desc:"วัดท้องถิ่น บรรยากาศเรียบง่ายแบบอีสาน"
     },
     {
-        title:"วัดป่าบ้านนา",
-        img:"forest temple,thailand",
-        desc:"วัดป่าร่มรื่น เหมาะสำหรับปฏิบัติธรรม"
+        title:"วัดป่าธรรมชาติ",
+        img:"forest temple thailand",
+        desc:"วัดป่าร่มรื่น เหมาะสำหรับนั่งสมาธิและพักใจ"
     },
     {
         title:"ตลาดสดเดชอุดม",
-        img:"thai market,ubon",
-        desc:"แหล่งอาหารและของกินพื้นบ้าน"
+        img:"thai market street",
+        desc:"ศูนย์รวมอาหารพื้นบ้าน ของกินอร่อยราคาถูก"
     },
     {
-        title:"แม่น้ำมูล (โซนใกล้เดชอุดม)",
-        img:"river thailand sunset",
-        desc:"จุดพักผ่อนริมแม่น้ำ บรรยากาศเย็นสบาย"
+        title:"ถนนคนเดินชุมชน",
+        img:"night market thailand",
+        desc:"ตลาดเย็น วิถีชุมชนและของกินหลากหลาย"
     },
     {
         title:"ทุ่งนาเดชอุดม",
-        img:"rice field thailand ubon",
-        desc:"วิวทุ่งนาเขียวขจี สวยมากช่วงฤดูฝน"
+        img:"rice field thailand sunset",
+        desc:"วิวทุ่งนาเขียวขจี สวยช่วงหน้าฝน"
     },
     {
-        title:"สะพานท้องถิ่น",
-        img:"wood bridge thailand rural",
-        desc:"จุดถ่ายรูปธรรมชาติในชุมชน"
+        title:"ลำห้วยธรรมชาติ",
+        img:"river nature thailand",
+        desc:"แหล่งน้ำธรรมชาติของชุมชน บรรยากาศเย็นสบาย"
+    },
+    {
+        title:"สะพานไม้ชุมชน",
+        img:"wood bridge rural thailand",
+        desc:"จุดถ่ายรูปยอดนิยมของคนในพื้นที่"
     },
     {
         title:"สวนสาธารณะเดชอุดม",
-        img:"park thailand rural",
-        desc:"สวนพักผ่อน ออกกำลังกายของคนในพื้นที่"
+        img:"park thailand green",
+        desc:"สถานที่พักผ่อนและออกกำลังกาย"
     },
     {
-        title:"หมู่บ้านเกษตรกรรม",
-        img:"village thailand farming",
-        desc:"เรียนรู้วิถีชีวิตชาวบ้านและเกษตรกร"
-    },
-    {
-        title:"จุดชมพระอาทิตย์ตกเดชอุดม",
+        title:"จุดชมพระอาทิตย์ตก",
         img:"sunset thailand field",
-        desc:"วิวพระอาทิตย์ตกสวยมาก เหมาะถ่ายรูป"
+        desc:"วิวพระอาทิตย์ตกสวยงาม เหมาะถ่ายรูปมาก"
     }
 ];
 
@@ -147,6 +158,7 @@ function prev(){
         show();
     }
 }
+
 </script>
 
 </body>
